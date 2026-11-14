@@ -1,0 +1,9 @@
+.env
+.git
+.github
+vendor
+storage/*.key
+storage/logs/*
+database/database.sqlite
+database/database.sqlite-shm
+database/database.sqlite-wal
