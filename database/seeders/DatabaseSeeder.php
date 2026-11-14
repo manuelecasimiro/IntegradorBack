@@ -18,6 +18,11 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        if (User::where('email', 'admin@inovaacess.com.br')->exists()) {
+            $this->command?->info('Base de dados já populada anteriormente com os dados iniciais.');
+            return;
+        }
+
         $defaultPassword = Hash::make('password123');
 
         // ==========================================

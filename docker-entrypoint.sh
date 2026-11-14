@@ -19,7 +19,7 @@ fi
 # Executa seeds se RUN_SEED estiver ativado
 if [ "$RUN_SEED" = "true" ]; then
     echo "Executando seeds do banco de dados..."
-    php artisan db:seed --force
+    php artisan db:seed --force || echo "Aviso: Seeds já aplicados ou ignorados, continuando com a inicialização..."
 fi
 
 # Otimizações de cache em produção
